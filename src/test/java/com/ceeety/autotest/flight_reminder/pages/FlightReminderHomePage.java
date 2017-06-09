@@ -2,11 +2,14 @@ package com.ceeety.autotest.flight_reminder.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import com.ceeety.autotest.flight_reminder.utils.Common;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class FlightReminderHomePage extends BasePage{
-	@AndroidFindBy(className="android.widget.EditText")
+	@FindBy(id="flight")
 	private WebElement flightNo;
 //	private WebElement subscribe;
 	
@@ -14,7 +17,7 @@ public class FlightReminderHomePage extends BasePage{
 		super(driver,"webview");
 	}
 	public void typeFlightNo(){
-//		driver.context("WEBVIEW_com.tencent.mm:appbrand0");
+		Common.WaitForElementIsDisplayed(driver, flightNo);
 		flightNo.sendKeys("2222");
 	}
 }

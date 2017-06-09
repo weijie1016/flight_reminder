@@ -5,6 +5,8 @@ com\ceeety\autotest\flight_reminder\pages\ScanQRCodePage.class
 com\ceeety\autotest\flight_reminder\pages\BasePage.class
 com\ceeety\autotest\flight_reminder\testcases\DemoTest.class
 com\ceeety\autotest\flight_reminder\pages\FlightReminderHomePage.class
+com\ceeety\autotest\flight_reminder\utils\Common$1.class
 com\ceeety\autotest\flight_reminder\testcases\LoginTest.class
 com\ceeety\autotest\flight_reminder\pages\LoginPage.class
 com\ceeety\autotest\flight_reminder\pages\BaiduPage.class
+com\ceeety\autotest\flight_reminder\utils\Common.class

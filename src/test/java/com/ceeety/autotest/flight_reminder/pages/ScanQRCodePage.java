@@ -2,6 +2,7 @@ package com.ceeety.autotest.flight_reminder.pages;
 
 import org.openqa.selenium.WebElement;
 
+import com.ceeety.autotest.flight_reminder.utils.Common;
 import com.thoughtworks.selenium.webdriven.commands.WaitForCondition;
 
 import io.appium.java_client.AppiumDriver;
@@ -22,13 +23,13 @@ public class ScanQRCodePage extends BasePage{
 	}
 
 
-	public FlightReminderHomePage scanQRCode() throws InterruptedException{
+	public FlightReminderHomePage scanQRCode(){
 
-		
+		Common.WaitForElementIsDisplayed(driver, more);
 		more.click();
-
+		Common.WaitForElementIsDisplayed(driver, toAlbum);
 		toAlbum.click();
-
+		Common.WaitForElementIsDisplayed(driver, qRCodePic);
 		qRCodePic.click();
 		
 

@@ -4,6 +4,9 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import com.ceeety.autotest.flight_reminder.utils.Common;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -22,6 +25,7 @@ public class BasePage {
 	
 	public BasePage(AppiumDriver<WebElement> driver,String flag) {
 		if(flag.equalsIgnoreCase("webview")){
+			
 			Set<String> contextNames = driver.getContextHandles();
 			for (String contextName : contextNames) {
 				System.out.println(contextName);
@@ -32,6 +36,8 @@ public class BasePage {
 					System.out.println("no WEBVIEW");
 				}
 			}
+			driver.context("NATIVE_APP");
+			driver.context("WEBVIEW_com.tencent.mm:tools");
 			this.driver= driver;
 			PageFactory.initElements(new AppiumFieldDecorator(driver, 30, TimeUnit.SECONDS), this);	
 		}else{
@@ -41,6 +47,7 @@ public class BasePage {
 	}
 	
 	public DiscoverPage toDiscoverPage(){
+		Common.WaitForElementIsDisplayed(driver, DiscoverTab);
 		DiscoverTab.click();
 		return new DiscoverPage(driver);
 	}

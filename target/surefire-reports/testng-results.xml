@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1135" started-at="2017-06-09T05:31:21Z" finished-at="2017-06-09T05:31:22Z">
+  <suite name="Suite" duration-ms="54936" started-at="2017-06-09T09:03:52Z" finished-at="2017-06-09T09:04:47Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1135" started-at="2017-06-09T05:31:21Z" finished-at="2017-06-09T05:31:22Z">
-      <class name="com.ceeety.autotest.flight_reminder.testcases.DemoTest">
-        <test-method status="FAIL" signature="beforeTest()[pri:0, instance:com.ceeety.autotest.flight_reminder.testcases.DemoTest@735f7ae5]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-06-09T13:31:21Z" finished-at="2017-06-09T13:31:21Z">
-          <exception class="org.openqa.selenium.UnsupportedCommandException">
+    <test name="Test" duration-ms="54936" started-at="2017-06-09T09:03:52Z" finished-at="2017-06-09T09:04:47Z">
+      <class name="com.ceeety.autotest.flight_reminder.testcases.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.ceeety.autotest.flight_reminder.testcases.LoginTest@5cc7c2a6]" name="beforeTest" is-config="true" duration-ms="51396" started-at="2017-06-09T17:03:52Z" finished-at="2017-06-09T17:04:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="testLogin()[pri:0, instance:com.ceeety.autotest.flight_reminder.testcases.LoginTest@5cc7c2a6]" name="testLogin" duration-ms="862" started-at="2017-06-09T17:04:43Z" finished-at="2017-06-09T17:04:44Z">
+          <exception class="io.appium.java_client.NoSuchContextException">
             <message>
-              <![CDATA[unknown command: wd/hub/session
-Command duration or timeout: 226 milliseconds
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'admichy-PC', ip: '192.168.0.26', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
-Driver info: io.appium.java_client.android.AndroidDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnsupportedCommandException: unknown command: wd/hub/session
-Command duration or timeout: 226 milliseconds
+              <![CDATA[No such context found. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 273 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'admichy-PC', ip: '192.168.0.26', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
 Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=C:\eclipse\workspace\flight_reminder\app\weixin658android1060.apk, appPackage=com.tencent.mm, networkConnectionEnabled=true, recreateChromeDriverSessions=true, noReset=true, noSign=true, warnings={}, databaseEnabled=false, deviceName=a7aa6477d03, platform=LINUX, appActivity=com.tencent.mm.ui.LauncherUI, desired={app=C:\eclipse\workspace\flight_reminder\app\weixin658android1060.apk, appPackage=com.tencent.mm, recreateChromeDriverSessions=true, noReset=true, noSign=true, deviceName=a7aa6477d03, appActivity=com.tencent.mm.ui.LauncherUI, platformVersion=6.0, browserName=, unicodeKeyboard=true, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}, platformName=Android, resetKeyboard=true}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}, platformName=Android, resetKeyboard=true}]
+Session ID: b3996886-bda0-46bb-aa67-d27b3cb897df]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.appium.java_client.NoSuchContextException: No such context found. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 273 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'admichy-PC', ip: '192.168.0.26', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=C:\eclipse\workspace\flight_reminder\app\weixin658android1060.apk, appPackage=com.tencent.mm, networkConnectionEnabled=true, recreateChromeDriverSessions=true, noReset=true, noSign=true, warnings={}, databaseEnabled=false, deviceName=a7aa6477d03, platform=LINUX, appActivity=com.tencent.mm.ui.LauncherUI, desired={app=C:\eclipse\workspace\flight_reminder\app\weixin658android1060.apk, appPackage=com.tencent.mm, recreateChromeDriverSessions=true, noReset=true, noSign=true, deviceName=a7aa6477d03, appActivity=com.tencent.mm.ui.LauncherUI, platformVersion=6.0, browserName=, unicodeKeyboard=true, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}, platformName=Android, resetKeyboard=true}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}, platformName=Android, resetKeyboard=true}]
+Session ID: b3996886-bda0-46bb-aa67-d27b3cb897df
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -32,24 +40,22 @@ Driver info: io.appium.java_client.android.AndroidDriver
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:36)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:92)
-	at com.ceeety.autotest.flight_reminder.testcases.DemoTest.beforeTest(DemoTest.java:29)
+	at io.appium.java_client.AppiumDriver.context(AppiumDriver.java:557)
+	at com.ceeety.autotest.flight_reminder.pages.BasePage.<init>(BasePage.java:40)
+	at com.ceeety.autotest.flight_reminder.pages.FlightReminderHomePage.<init>(FlightReminderHomePage.java:17)
+	at com.ceeety.autotest.flight_reminder.testcases.LoginTest.testLogin(LoginTest.java:27)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:656)
-	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
@@ -67,15 +73,15 @@ Driver info: io.appium.java_client.android.AndroidDriver
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnsupportedCommandException -->
+          </exception> <!-- io.appium.java_client.NoSuchContextException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="SKIP" signature="AfterTest()[pri:0, instance:com.ceeety.autotest.flight_reminder.testcases.DemoTest@735f7ae5]" name="AfterTest" is-config="true" duration-ms="0" started-at="2017-06-09T13:31:22Z" finished-at="2017-06-09T13:31:22Z">
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.ceeety.autotest.flight_reminder.testcases.LoginTest@5cc7c2a6]" name="afterTest" is-config="true" duration-ms="2630" started-at="2017-06-09T17:04:44Z" finished-at="2017-06-09T17:04:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterTest -->
-      </class> <!-- com.ceeety.autotest.flight_reminder.testcases.DemoTest -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.ceeety.autotest.flight_reminder.testcases.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -13,7 +13,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class BaseTest {
@@ -25,7 +24,6 @@ public class BaseTest {
 		File appDir = new File(classpathRoot, "app");
 		File app = new File(appDir, "weixin658android1060.apk");
 		System.out.println("---------------------------");
-		
 		DesiredCapabilities capabilities=new DesiredCapabilities();
 		capabilities.setCapability("app",app.getAbsolutePath());
 		capabilities.setCapability("noReset", true);
@@ -38,21 +36,18 @@ public class BaseTest {
 		capabilities.setCapability("resetKeyboard","True");
 		capabilities.setCapability("appPackage", "com.tencent.mm");
 		capabilities.setCapability("appActivity", "com.tencent.mm.ui.LauncherUI");
-		
-//		ChromeOptions options = new ChromeOptions();
-//		options.setExperimentalOption("androidProcess", "com.tencent.mm:tools");
-//		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-		
-		
+		capabilities.setCapability("recreateChromeDriverSessions", "True");
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("androidProcess", "com.tencent.mm:tools");
+		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 //		System.out.println(System.getenv("classpath"));
 		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 
 	@AfterTest
 	public void afterTest() {
 		driver.quit();
 	}
-
 }

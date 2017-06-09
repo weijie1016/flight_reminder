@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import io.appium.java_client.android.AndroidDriver;
 
 public class DemoTest {
@@ -20,10 +22,15 @@ public class DemoTest {
 		options.setExperimentalOption("androidUseRunningApp", true);
 		options.setExperimentalOption("androidActivity", ".plugin.webview.ui.tools.WebViewUI");
 		options.setExperimentalOption("androidProcess", "com.tencent.mm:tools");
+		
+
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability(ChromeOptions.CAPABILITY, options);
 		String url = "http://127.0.0.1:8000/wd/hub";
 		driver = new AndroidDriver<WebElement>(new URL(url), capability);
+	}
+	@Test
+	public void f(){
 		driver.get("http://www.baidu.com");
 		System.out.println(driver.getPageSource());
 	}
