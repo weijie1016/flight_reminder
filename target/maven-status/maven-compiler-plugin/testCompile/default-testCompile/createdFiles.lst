@@ -1,0 +1,10 @@
+com\ceeety\autotest\flight_reminder\pages\HomePage.class
+com\ceeety\autotest\flight_reminder\testcases\BaseTest.class
+com\ceeety\autotest\flight_reminder\pages\DiscoverPage.class
+com\ceeety\autotest\flight_reminder\pages\ScanQRCodePage.class
+com\ceeety\autotest\flight_reminder\pages\BasePage.class
+com\ceeety\autotest\flight_reminder\testcases\DemoTest.class
+com\ceeety\autotest\flight_reminder\pages\FlightReminderHomePage.class
+com\ceeety\autotest\flight_reminder\testcases\LoginTest.class
+com\ceeety\autotest\flight_reminder\pages\LoginPage.class
+com\ceeety\autotest\flight_reminder\pages\BaiduPage.class
