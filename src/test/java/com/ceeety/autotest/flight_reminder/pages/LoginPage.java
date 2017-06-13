@@ -1,28 +1,25 @@
 package com.ceeety.autotest.flight_reminder.pages;
 
-
-
-
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class LoginPage extends BasePage {
 	@AndroidFindBy(id="com.tencent.mm:id/bg9")
-	private MobileElement moreButton;
+	private WebElement moreButton;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='切换帐号']")
-	private MobileElement switchAccount;
+	private WebElement switchAccount;
 	@AndroidFindBy(id="com.tencent.mm:id/bgd")
-	private MobileElement toLoginButton;
+	private WebElement toLoginButton;
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='帐   号']/following-sibling::*")
-	private MobileElement account;
+	private WebElement account;
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='密   码']/following-sibling::*")
-	private MobileElement password;
+	private WebElement password;
 	@AndroidFindBy(id="com.tencent.mm:id/bfo")
-	private MobileElement loginButton;
+	private WebElement loginButton;
 	
-	
+
 	public LoginPage(AppiumDriver driver) {
 		super(driver);
 //		PageFactory.initElements(new AppiumFieldDecorator(driver, 30, TimeUnit.SECONDS), this);
@@ -49,10 +46,5 @@ public class LoginPage extends BasePage {
 	public void clickLoginButton(){
 		loginButton.click();
 	}
-	public HomePage doLogin(){
-		typeAccount();
-		typePassword();
-		clickLoginButton();
-		return new HomePage(driver);
-	}
+
 }

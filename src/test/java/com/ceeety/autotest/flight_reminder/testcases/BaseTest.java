@@ -3,7 +3,6 @@ package com.ceeety.autotest.flight_reminder.testcases;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,21 +28,22 @@ public class BaseTest {
 		capabilities.setCapability("noReset", true);
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("deviceName", "a7aa6477d03");
+		capabilities.setCapability("deviceName", "1976974f");
+//		capabilities.setCapability("deviceName", "a7aa6477d03");
 		capabilities.setCapability("platformVersion", "6.0");
 		capabilities.setCapability("noSign","true");
 		capabilities.setCapability("unicodeKeyboard","True");
-		capabilities.setCapability("resetKeyboard","True");
+		capabilities.setCapability("resetKeyboard","True"); 
 		capabilities.setCapability("appPackage", "com.tencent.mm");
 		capabilities.setCapability("appActivity", "com.tencent.mm.ui.LauncherUI");
 		capabilities.setCapability("recreateChromeDriverSessions", "True");
+		
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("androidProcess", "com.tencent.mm:tools");
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-//		System.out.println(System.getenv("classpath"));
+		System.out.println(System.getenv("classpath"));
 		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@AfterTest

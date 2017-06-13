@@ -6,15 +6,4 @@
       <class name="com.ceeety.autotest.flight_reminder.testcases.LoginTest"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <classes>
-      <class name="com.ceeety.autotest.flight_reminder.testcases.LoginTest">
-        <methods>
-          <include name="afterTest"/>
-          <include name="testLogin"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.ceeety.autotest.flight_reminder.testcases.LoginTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
