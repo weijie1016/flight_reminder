@@ -1,6 +1,9 @@
 package com.ceeety.autotest.flight_reminder.pages;
 
 import org.openqa.selenium.WebElement;
+
+import com.ceeety.autotest.flight_reminder.base.BasePage;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

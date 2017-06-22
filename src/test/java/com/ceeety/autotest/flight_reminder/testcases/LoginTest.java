@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.ceeety.autotest.flight_reminder.base.BaseTest;
 import com.ceeety.autotest.flight_reminder.datadriver.CSVDataDriver;
 import com.ceeety.autotest.flight_reminder.pages.LoginPage;
 
@@ -28,12 +29,25 @@ public class LoginTest extends BaseTest {
 				// //.clickToLoginButton()
 				// //输入“帐号”为QQ号
 				// //.doLogin()
-				.toDiscoverPage()
-				.toScanQRCodePage()
-				.scanQRCode();
-//				.typeFlightNoAndNext();
-//				.typePhoneNoAndNext()
-//				.getConfirmInfo();
+//				.toDiscoverPage()
+//				.toScanQRCodePage()
+//				.scanQRCode()
+				.toHomePage()
+				.toChatPage()
+				.toFlightPage()
+				
+		
+		
+				.typeFlightNoAndNext()
+				.typePhoneNoAndNext()
+				.confirmAndNext()
+				.getServicesInfo();
+				
+				
+		
+		
+		
+		
 		// System.out.print(data.get("字段1"));
 		// System.out.print(data.get("字段2"));
 		// System.out.print(data.get("字段3"));

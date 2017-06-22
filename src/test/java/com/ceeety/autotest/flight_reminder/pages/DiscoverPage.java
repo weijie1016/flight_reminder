@@ -2,6 +2,7 @@ package com.ceeety.autotest.flight_reminder.pages;
 
 import org.openqa.selenium.WebElement;
 
+import com.ceeety.autotest.flight_reminder.base.BasePage;
 import com.ceeety.autotest.flight_reminder.utils.Wait;
 
 import io.appium.java_client.AppiumDriver;

@@ -1,4 +1,4 @@
-package com.ceeety.autotest.flight_reminder.testcases;
+package com.ceeety.autotest.flight_reminder.base;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -38,6 +40,11 @@ public class BaseTest {
 		capabilities.setCapability("appActivity", "com.tencent.mm.ui.LauncherUI");
 		capabilities.setCapability("recreateChromeDriverSessions", "True");
 		
+//		capabilities.setCapability("newCommandTimeout", 60);
+//		capabilities.setCapability("autoWebview","True");
+//		capabilities.setCapability("autoWebviewTimeout",30000);
+
+		
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("androidProcess", "com.tencent.mm:tools");
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -50,4 +57,6 @@ public class BaseTest {
 	public void afterTest() {
 		driver.quit();
 	}
+
+	
 }

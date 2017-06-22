@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test name="Test">
+	<test name="flight_reminder">
 		<classes>
-			<class name="com.ceeety.autotest.flight_reminder.testcases.LoginTest" />
+			<!-- class name="com.ceeety.autotest.flight_reminder.testcases.NewTest" /-->
+			<class name="com.ceeety.autotest.flight_reminder.testcases.DataTest" />
 		</classes>
 	</test> <!-- Test -->
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener
+			class-name="com.ceeety.autotest.flight_reminder.listener.TestNGListener" />
+	</listeners>
 </suite> <!-- Suite -->
